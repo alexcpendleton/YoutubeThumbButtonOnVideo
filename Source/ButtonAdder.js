@@ -6,23 +6,14 @@ if (existingButton) {
   existingButton.parentElement.removeChild(existingButton);
 }
 var targetContainer = document.querySelector(".ytp-right-controls");
-var thumbButton = document.createElement("span");
+var thumbButton = document.createElement("button");
 thumbButton.name = buttonID;
 thumbButton.id = buttonID;
-thumbButton.value = "Thumb";
-thumbButton.type = "button";
-//var innerText = document.createElement("Butt");
-//thumbButton.appendChild(innerText);
-//thumbButton.innerHTML = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" data-icon=\"thumb-down\" data-container-transform=\"translate(1 ) scale(1 1 )\" viewBox=\"0 0 36 36\" x=\"0px\" y=\"0px\"><path d=\"M10 0l-10 76h32v-76h-22zm46 2l-20 4v68c5 0 9.388 1.912 12.688 5.313 7.7 7.5 19.313 22.588 19.313 34.688v11c0 1.7 1.3 3 3 3h6c5 0 9-4 9-9v-5c0-16-5-26.5-5-31s4-9 9-9h27c5 0 9-3.9 9-9 0-.5-.194-1.6-.594-3-3.1-12.4-18.094-54.5-18.094-54.5-1.4-3.2-4.612-5.5-8.313-5.5h-43zm-30 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z\" transform=\"translate(1)\"/><text x=\"0\" y=\"143\" fill=\"#000000\" font-size=\"5px\" font-weight=\"bold\" font-family=\"'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif\">Created by useiconic.com</text><text x=\"0\" y=\"148\" fill=\"#000000\" font-size=\"5px\" font-weight=\"bold\" font-family=\"'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif\">from the Noun Project</text></svg>";
-
-var youtubeLikeButton = findLikeButtonToClone();
-console.log("youtubeLikeButton", youtubeLikeButton);
-var cloned = youtubeLikeButton.cloneNode(false);
-cloned.className = cloned.className.replace("hid", "") + " ytb-button"
-console.log("cloned", cloned);
-cloned.id = prefix + cloned.id;
-thumbButton.appendChild(cloned);
-
+thumbButton.className = "ytb-button";
+// Unmodified from Noun project (except for attribution)
+//thumbButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" data-icon="thumb-down" data-container-transform="scale(1 1 ) translate(1 1 )" viewBox="0 0 16 20" x="0px" y="0px"><path d="M0 0v8h3v-8h-3zm4 0v8c.6 0 1.006.194 1.406.594.4.4 2.294 4.219 2.594 4.719.3.5.813.787 1.313.688.5-.2.787-.713.688-1.313-.2-.5-1-3.188-1-3.688s.4-1 1-1h3c.6 0 1-.4 1-1l-2.094-6.406c-.1-.3-.506-.594-.906-.594h-7z" transform="translate(1 1)"/></svg>';
+// Temporary Attribution: thumbs down by useiconic.com from the Noun Project https://thenounproject.com/search/?q=thumb&i=45357
+thumbButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" data-icon="thumb-down" data-container-transform="scale(1 1 ) translate(1 1 )" width="511.625px" height="511.625px" viewBox="0 0 36 36" x="0px" y="0px" fill="#FFFFFF"><path  d="M0 0v8h3v-8h-3zm4 0v8c.6 0 1.006.194 1.406.594.4.4 2.294 4.219 2.594 4.719.3.5.813.787 1.313.688.5-.2.787-.713.688-1.313-.2-.5-1-3.188-1-3.688s.4-1 1-1h3c.6 0 1-.4 1-1l-2.094-6.406c-.1-.3-.506-.594-.906-.594h-7z" transform="translate(1 1)"/></svg>';
 function findLikeButtonToClone() {
   var selector = ".like-button-renderer-like-button";
   var youtubeLikeButton = document.querySelector(selector);
