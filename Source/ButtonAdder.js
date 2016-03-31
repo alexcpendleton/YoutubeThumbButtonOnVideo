@@ -60,14 +60,12 @@ StyleAttributeStyler.prototype.applyStyleToInnerSvg = function(container, style)
   }
 }
 StyleAttributeStyler.prototype.applyLikedStyle = function(applyTo) {
-  //applyTo.querySelector('svg').style = 'fill:#FFFFFF';
   console.log("applyingLikedStyle")
-  this.applyStyleToInnerSvg(applyTo);
+  this.applyStyleToInnerSvg(applyTo, "fill:#5EA9E2");
 };
 StyleAttributeStyler.prototype.applyNotLikedStyle = function(applyTo) {
-  //applyTo.querySelector('svg').style = 'fill:red';
   console.log("applyingNotLikedStyle")
-  this.applyStyleToInnerSvg(applyTo);
+  this.applyStyleToInnerSvg(applyTo, "fill:#ffffff");
 };
 
 styler = new StyleAttributeStyler();
